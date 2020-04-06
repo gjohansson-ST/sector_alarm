@@ -3,13 +3,14 @@
 A Sector Alarm component for Home Assistant including the AsyncSector
 
 Forked from mgejke
+
 Added locks
 
 ## Usage
 
 Clone or download the files, put them in your Home Assistant settings folder:
 ```
-<your_home_assistant_folder>\custom_components\sector_alarm\
+<your_home_assistant_folder>\custom_components\sector_alarm\...
 ```
 
 Add the following to your settings file:
