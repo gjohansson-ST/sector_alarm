@@ -68,11 +68,11 @@ async def async_setup(hass, config):
         _LOGGER.debug("sector_alarm failed to log in. Check your credentials.")
         return False
 
-    panel = config[DOMAIN].get(CONF_ALARM_PANEL, False)
+    panel = config[DOMAIN].get(CONF_ALARM_PANEL, True)
     thermometers = config[DOMAIN].get(CONF_THERMOMETERS, True)
-    locks = config[DOMAIN].get(CONF_LOCKS, False)
+    locks = config[DOMAIN].get(CONF_LOCKS, True)
 
-    sector_data = SectorAlarmHub(async_sector, panel, thermometers)
+    sector_data = SectorAlarmHub(async_sector, panel, thermometers, locks)
     await sector_data.update()
     hass.data[DATA_SA] = sector_data
 
