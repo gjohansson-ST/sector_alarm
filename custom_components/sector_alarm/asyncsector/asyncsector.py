@@ -23,7 +23,7 @@ class AsyncSector(object):
     async def getapiversion(session):
         """ Tries to retrieve current API version """
 
-        with async_timeout.timeout(90):
+        with async_timeout.timeout(200):
             response = await session.get(
                 AsyncSector.Base, json=None)
 

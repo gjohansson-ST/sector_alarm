@@ -13,7 +13,7 @@ async def get_json(request):
     '''
 
     try:
-        with async_timeout.timeout(20):
+        with async_timeout.timeout(90):
             async with request as response:
                 if response.status == 426:
                     result = await response.text()
